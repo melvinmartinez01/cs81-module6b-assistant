@@ -2,11 +2,12 @@
 function PersonalAssistant(name) {
   this.name = name;
   this.tasks = [];
-  this.mode = "nurturing";
-  this.mood = "endearing";
-  this.time = "8 AM"
+  this.mode = "Nurturing";
+  this.mood = "Endearing";
+  //Edited time for multiples
+  this.time = ["8 AM", "12:00 PM", "5:45 PM"];
   this.temperature = 79;
-  this.traffic10Freeway = "heavy";
+  this.traffic10Freeway = "Heavy";
 }
 
 //Method: addTasks
@@ -44,12 +45,15 @@ PersonalAssistant.prototype.reportMood = function() {
 //Introduce personal assistant
 PersonalAssistant.prototype.introduce = function() {
   console.log(`Hello sir. I am ${this.name}.`);
-  console.log(`(${this.name} stands for: Heuristic Electronic Rsesearch and Business Intelligence Engine.)`);
+  console.log(`(${this.name} stands for: Heuristic Electronic Research and Business Intelligence Engine.)`);
 };
 
 //Reports time (used after completing each task)
 PersonalAssistant.prototype.reportTime = function() {
-  console.log(`Time check: ${this.time}.`);
+  if (this.currentTimeIndex < this.timeSchedule.length) {
+    console.log(`Time check: ${this.timeSchedule[this.currentTimeIndex]}.`);
+    this.currentTimeIndex++;
+  }
 };
 
 //Reports temperature and traffic flow
