@@ -48,7 +48,7 @@ PersonalAssistant.prototype.introduce = function() {
 };
 
 //Reports time (used after completing each task)
-PersonalAssistant.prototype.reportTime = functional() {
+PersonalAssistant.prototype.reportTime = function() {
   console.log(`Time check: ${this.time}.`);
 };
 
@@ -70,7 +70,7 @@ PersonalAssistant.prototype.windDown = function() {
 PersonalAssistant.prototype.restSuggestion = function() {
   this.mood = "tired";
   this.reportMood();
-  console log("No further tasks detected. Would you like to rest, or should I set the mood for a quick smoke break?");
+  console.log("No further tasks detected. Would you like to rest, or should I set the mood for a quick smoke break?");
 };
 
 //Console.log to simulate the day
