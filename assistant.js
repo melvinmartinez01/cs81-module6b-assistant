@@ -72,3 +72,34 @@ PersonalAssistant.prototype.restSuggestion = function() {
   this.reportMood();
   console log("No further tasks detected. Would you like to rest, or should I set the mood for a quick smoke break?");
 };
+
+//Console.log to simulate the day
+const herb = new PersonalAssistant("H.E.R.B.I.E");
+//Intro
+herb.introduce();
+
+//Mood before
+herb.reportMood();
+//Environmental report
+herb.reportTime();
+herb.reportEnvironment();
+
+//Add 3 tasks
+herb.addTask("Take out the trash");
+herb.addTask("Wash the dishes");
+herb.addTask('Take Theo out for a walk');
+
+//Complete tasks
+herb.completeTask();
+herb.completeTask();
+herb.completeTask();
+
+//Mood after
+herb.mood = "accomplished";
+herb.reportMood();
+
+//After tasks are done, HERBIE asks about wind-down
+herb.windDown();
+
+//End message
+herb.restSuggestion();
