@@ -58,4 +58,17 @@ PersonalAssistant.prototype.reportEnvironment = function() {
   console.log(`10 freeway traffic level: ${this.traffic10Freeway}.`);
 };
 
+//Wind-down message
+PersonalAssistant.prototype.windDown = function() {
+  console.log("Sir, would you like me to silence your calls?");
+  console.log("I'll ensure that the wife's calls and messages are of top priority.");
+  console.log("Also, I've gone ahead and prepared the water and bubbles for a bath.");
+  console.log("You have about 1 hour and 20 minutes before the family arrive.");
+};
 
+// Rest/Smoke break + mood change
+PersonalAssistant.prototype.restSuggestion = function() {
+  this.mood = "tired";
+  this.reportMood();
+  console log("No further tasks detected. Would you like to rest, or should I set the mood for a quick smoke break?");
+};
