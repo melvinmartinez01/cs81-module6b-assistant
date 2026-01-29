@@ -26,6 +26,9 @@ PersonalAssistant.prototype.completeTask = function() {
     this.reportTime();
 
     console.log(`You now have ${this.tasks.length} task(s) left.`);
+    if (this.tasks.length === 0) {
+      this.mood = "tired";
+    }
   } else {
     console.log("No tasks left to complete.");
   }
